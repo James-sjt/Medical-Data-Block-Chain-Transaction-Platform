@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h2>{{ datafile.title }}</h2>
+<p><strong>描述：</strong> {{ datafile.description }}</p>
+<p><strong>上传者：</strong> {{ datafile.uploader.username }}</p>
+<p><strong>当前所有者：</strong> {{ datafile.current_owner.username }}</p>
+<p><strong>文件：</strong> <a href="{{ datafile.file.url }}" target="_blank">下载</a></p>
+<p><strong>价格：</strong> {{ datafile.price }}</p>
+<p><strong>状态：</strong>
+    {% if datafile.is_for_sale %}
+        <span class="badge bg-success">可售</span>
+    {% else %}
+        <span class="badge bg-secondary">不可售</span>
+    {% endif %}
+</p>
+
+{% if user == datafile.current_owner %}
+    <a href="{% url 'transfer' datafile.id %}" class="btn btn-warning">转让所有权</a>
+{% elif datafile.is_for_sale %}
+    <form method="post" action="{% url 'buy' datafile.id %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">购买版权</button>
+    </form>
+{% endif %}
+{% endblock %}

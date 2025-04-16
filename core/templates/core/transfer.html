@@ -1,9 +1,9 @@
 {% extends 'core/base.html' %}
 {% block content %}
-<h2>transfer ownership：{{ datafile.title }}</h2>
+<h2>转让所有权：{{ datafile.title }}</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-danger">confirm transfer</button>
+    <button type="submit" class="btn btn-danger">确认转让</button>
 </form>
 {% endblock %}

@@ -15,3 +15,6 @@ $ cd Medical-Data-Block-Chain-Transaction-Platform
 $ python manage.py runserver
 ```
 The initial username and password are both 'hajihajiguang'.
+
+![Dog](https://github.com/user-attachments/assets/7c43af6b-eee2-4802-b22b-377a710ebd6e)
+

@@ -7,7 +7,7 @@ This is a simple Medical Data Block Chain Transaction Platform, where users can 
 ## 🛠️ How to implement?
 1. Clone this repository:
 ```sh
-$ git clone https://github.com/James-sjt/Medical-Data-Block-Chain-Transaction-Platform
+$ git clone https://github.com/James-sjt/Medical-Data-Block-Chain-Transaction-Platform.git
 ```
 2. Run the server:
 ```sh

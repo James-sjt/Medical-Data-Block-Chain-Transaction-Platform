@@ -1,25 +1,25 @@
 {% extends 'core/base.html' %}
 {% block content %}
-<h2>search transactions history</h2>
+<h2>查询交易记录</h2>
 
 <form method="GET" action="{% url 'search_transactions' %}">
 
     <div class="mb-3">
-        <input type="text" name="search" class="form-control" placeholder="please input the title" value="{{ query }}">
+        <input type="text" name="search" class="form-control" placeholder="请输入标题" value="{{ query }}">
     </div>
-    <button type="submit" class="btn btn-primary">search</button>
+    <button type="submit" class="btn btn-primary">搜索</button>
 </form>
 
 {% if results %}
-    <h4 class="mt-4">result：</h4>
+    <h4 class="mt-4">查询结果：</h4>
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>file name</th>
-                <th>uploader</th>
-                <th>current owner</th>
-                <th>transaction time</th>
-                <th>transaction type</th>
+                <th>文件名</th>
+                <th>上传者</th>
+                <th>当前所有者</th>
+                <th>交易时间</th>
+                <th>交易类型</th>
             </tr>
         </thead>
         <tbody>
@@ -35,7 +35,7 @@
         </tbody>
     </table>
 {% elif query %}
-    <p class="mt-4">Cannot find any results.</p>
+    <p class="mt-4">未找到相关交易记录。</p>
 {% endif %}
 
 {% endblock %}

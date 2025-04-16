@@ -1,9 +1,9 @@
 {% extends 'core/base.html' %}
 {% block content %}
-<h2>上传数据</h2>
+<h2>upload data</h2>
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-success">上传</button>
+    <button type="submit" class="btn btn-success">upload</button>
 </form>
 {% endblock %}

@@ -14,7 +14,7 @@ $ git clone https://github.com/James-sjt/Medical-Data-Block-Chain-Transaction-Pl
 $ cd Medical-Data-Block-Chain-Transaction-Platform
 $ python manage.py runserver
 ```
-The initial username and password are both 'hajihajiguang'.
+The initial username and password are both 'hajiguang'.
 
 ![Dog](https://github.com/user-attachments/assets/7c43af6b-eee2-4802-b22b-377a710ebd6e)
 
